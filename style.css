@@ -1,0 +1,257 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header {
+    padding: 30px;
+    background-color: #fff;
+    text-align: center;
+    height: 9vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+    width: 20%;
+    height: auto;
+}
+
+.menu {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#special_href {
+    float: right;
+}
+
+.menu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+.row {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.content_col_1 {
+    float: left;
+    width: 75%;
+    box-sizing: border-box;
+    padding-right: 20px;
+}
+
+.content_col_2 {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+.article-meta {
+    color: #888;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 14px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.content_col_1 h2 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.content_col_1 a,
+.content_col_2 a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.content_col_1 a:hover,
+.content_col_2 a:hover {
+    color: #555;
+}
+
+.img {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.img img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.content_col_1 img {
+    width: 47%;
+    margin-right: 10px;
+}
+
+.img img:hover {
+    transform: scale(1.05);
+}
+
+.popular-posts .img {
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.popular-posts .img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.popular-posts .img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popular-posts .img:hover::after {
+    opacity: 1;
+}
+
+.popular-posts .img span {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-30%, -50%);
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+.popular-posts .img:hover span {
+    opacity: 1;
+}
+
+.socials li {
+    display: inline-block;
+    width: 30px;
+}
+
+.socials img {
+    width: 20px;
+    transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+    transform: scale(1.2);
+}
+
+.footer {
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #ddd;
+    font-size: 0.5em;
+}
+
+@media screen and (max-width: 900px) {
+
+    body {
+        font-size: 3vw;
+    }
+
+    .menu a {
+        padding: 1.5vw 2vw;
+    }
+
+    .header {
+        height: 15vw;
+    }
+
+    .logo-image {
+        width: 30%;
+        height: auto;
+    }
+
+    .content_col_1,
+    .content_col_2 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .menu {
+        position: static;
+    }
+
+    .header {
+        height: 20vw;
+    }
+
+    .logo-image {
+        width: 40%;
+        height: auto;
+    }
+
+    .menu a,
+    #special_href {
+        float: none;
+        width: 100%;
+    }
+}
